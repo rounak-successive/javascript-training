@@ -1,19 +1,19 @@
 // Write a program to print fibonaaci series
 
 function printFibonacci(range) {
-  let first = 1,
-    second = 0,
+  let prev = 0,
+    cur = 1,
     i = 2,
     output = ''
-  if (range >= 1) output = output + second + ' '
-  while (i < range) {
-    output = output + first + ' '
-    let temp = first + second
-    second = first
-    first = temp
+  if (range >= 1) output = output + prev + ' '
+  while (i <= range) {
+    output = output + cur + ' '
+    let temp = prev + cur
+    prev = cur
+    cur = temp
     i++
   }
-  output = output + first + ' '
+
   return output
 }
 
