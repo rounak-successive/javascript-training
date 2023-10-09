@@ -1,0 +1,29 @@
+<!--  Write a program to convert given string in camel case ("hello john doe" =>
+helloJohnDoe) -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+    <script>
+      function convertToCamelCase(string) {
+        string = string.toLowerCase()
+        let words = string.split(' ')
+        for (let i = 1; i < words.length; i++) {
+          if (!words[i]) continue
+          let temp = words[i]
+          temp = temp[0].toUpperCase() + temp.substr(1)
+          words[i] = temp
+        }
+        return words.join('')
+      }
+
+      const inputString = 'hello    john doe',
+        output = convertToCamelCase('hello    john doe')
+      console.log('The desired string is:', output)
+    </script>
+  </head>
+  <body>
+    <h1>Hello</h1>
+  </body>
+</html>

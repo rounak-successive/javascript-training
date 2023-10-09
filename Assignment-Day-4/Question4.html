@@ -1,0 +1,22 @@
+<!-- Write a program to convert given string to upperCase OR lowerCase -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+    <script>
+      let inputString = prompt('Enter the string')
+      while (inputString.length == 0) {
+        alert('Enter valid string')
+        inputString = prompt('Enter the string')
+      }
+      const lowerCaseString = inputString.toLowerCase(),
+        upperCaseString = inputString.toUpperCase()
+      console.log('Lower case :', lowerCaseString)
+      console.log('Upper case :', upperCaseString)
+    </script>
+  </head>
+  <body>
+    <h1>Hello</h1>
+  </body>
+</html>
