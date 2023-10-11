@@ -7,7 +7,7 @@ class Shape {
   }
 
   getArea() {
-    console.log('The area of the Shape is:')
+    return this.height * this.width
   }
 }
 
@@ -17,8 +17,8 @@ class Rectangle extends Shape {
   }
 
   getArea() {
-    super.getArea()
-    return this.width * this.height
+    const area = super.getArea()
+    return 'The area of the Rectangle is: ' + area
   }
 }
 
@@ -28,14 +28,13 @@ class Triangle extends Shape {
   }
 
   getArea() {
-    super.getArea()
-    return (this.width * this.height) / 2
+    const area = super.getArea() / 2
+    return 'The area of the Triangle is: ' + area
   }
 }
 
 const rectangle = new Rectangle(4, 5),
-  triangle = new Triangle(5, 8),
-  shape = new Shape(2, 3)
+  triangle = new Triangle(5, 8)
 
 console.log(rectangle.getArea())
 console.log(triangle.getArea())
