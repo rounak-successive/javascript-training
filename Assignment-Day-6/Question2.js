@@ -7,7 +7,7 @@ class Shape {
   }
 
   getArea() {
-    return NaN
+    console.log('The area of the Shape is:')
   }
 }
 
@@ -17,6 +17,7 @@ class Rectangle extends Shape {
   }
 
   getArea() {
+    super.getArea()
     return this.width * this.height
   }
 }
@@ -27,6 +28,7 @@ class Triangle extends Shape {
   }
 
   getArea() {
+    super.getArea()
     return (this.width * this.height) / 2
   }
 }
@@ -35,6 +37,5 @@ const rectangle = new Rectangle(4, 5),
   triangle = new Triangle(5, 8),
   shape = new Shape(2, 3)
 
-console.log('The area of the rectangle is: ', rectangle.getArea())
-console.log('The area of the triangle is:', triangle.getArea())
-console.log('The area of the shape is :', shape.getArea())
+console.log(rectangle.getArea())
+console.log(triangle.getArea())
